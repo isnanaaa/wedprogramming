@@ -2,8 +2,8 @@
 
 require_once "db.php";
 
-$nim = $_POST['nim'];
-$nama = $_POST['nama'];
+$nim = htmlspecialchars($_POST['nim']);
+$nama = htmlspecialchars($_POST['nama']);
 
 $sql = "INSERT INTO mahasiswa (nim, nama) VALUES ('".$nim."','".$nama."')";
 
@@ -18,3 +18,4 @@ else{
 $conn->close();
 
  ?>
+ 
