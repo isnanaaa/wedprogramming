@@ -7,16 +7,16 @@ $id = $_GET["id"];
 if(delete($id) > 0){
     echo "
     <script>
-    alert('Data Berhasil Dihapus');
+    alert('Data Deleted!');
     document.location.href='fetch.php';
-    <script/>
+    </script>
     ";
 } else {
     echo "
     <script>
-    alert('Data Gagal Dihapus');
+    alert('Delete Failed');
     document.location.href='fetch.php';
-    <script/>
+    </script>
     ";
 }
 

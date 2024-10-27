@@ -1,7 +1,7 @@
 <?php 
 // require_once "db.php";
 require_once "functions.php";
-$mahasiswa = query("SELECT * FROM mahasiswa LIMIT 10");
+$mahasiswa = query("SELECT * FROM mahasiswa WHERE nim = '4320226180'");
 
 //$sql = "SELECT nim, nama FROM mahasiswa ORDER BY nama LIMIT 10";
 
@@ -30,7 +30,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa LIMIT 10");
 
 <html>
 <head>
-    <title>Tugas 1</title>
+    <title>Data Mahasiswa</title>
 </head>
 <body>
     <h1>Data Mahasiswa</h1>
@@ -50,7 +50,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa LIMIT 10");
 <tr>
         <td><?= $i; ?></td>
         <td>
-            <a href="">Update</a> |
+            <a href="update.php?id=<?= $row["id"]; ?>">Update</a> |
             <a href="delete.php?id=<?= $row["id"]; ?>" onclick="return confirm('Are you sure?');">Delete</a>
         </td>
         <td><?= $row["nim"]; ?></td>
