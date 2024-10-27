@@ -44,7 +44,7 @@ function update($data){
     $nim = htmlspecialchars($data['nim']);
     $nama = htmlspecialchars($data['nama']);
     
-    $sql = "UPDATE mahasiswa SET nim = $nim, nama = $nama WHERE id = $id";
+    $sql = "UPDATE mahasiswa SET nim = '$nim', nama = '$nama' WHERE id = $id";
     
     mysqli_query($conn, $sql);
 

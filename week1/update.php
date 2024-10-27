@@ -42,7 +42,7 @@ if (isset($_POST["submit"])){
 			<label for="">Nama</label>
 			<input type="text" name="nama" id="nama" value="<?= $mhs["nama"]; ?>">
 
-			<button type="submit" name="Submit">Update</button>
+			<button type="submit" name="submit">Update</button>
 		</form>
 
 </body>
